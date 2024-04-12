@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import NotFound from "../pages/Not found/NotFound";
+import EstateDetails from "../pages/EstateDetails/EstateDetails";
 
  
 
@@ -15,7 +16,15 @@ import NotFound from "../pages/Not found/NotFound";
                         children:[
                               {
                                     path:"/",
-                                    element:<Home></Home>
+                                    element:<Home></Home>,
+                                    loader:()=>fetch('/Residential.json')
+                              },
+                              {
+                                 path:'/estate/:id',
+                                 element:<EstateDetails></EstateDetails>,
+                                 loader:()=>fetch('/Residential.json')
+
+
                               },
                               {
                                     path:"/login",

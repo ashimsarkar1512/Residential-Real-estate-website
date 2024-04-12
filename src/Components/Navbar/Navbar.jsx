@@ -16,13 +16,13 @@ const Navbar = () => {
 
 
             const navLinks=<>
-            <li><NavLink to='/'><a>Home</a></NavLink></li>
+            <li><NavLink to='/'>Home</NavLink></li>
             
             
 
 </>
    return (
-       <div className="navbar bg-base-100">
+       <div className="navbar  rounded-md bg-blue-500 mt-3">
        <div className="navbar-start">
          <div className="dropdown">
            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,9 +46,12 @@ const Navbar = () => {
        <div className="navbar-end">
        {
         user?
-        <button onClick={handleSignOut} className="btn">signOut</button>
+       <div className="flex gap-3">
+         <img className="w-8 rounded-full" src='https://i.ibb.co/BCWmFS4/unnamed.jpg' alt="" /> 
+        <button  onClick={handleSignOut} className="text-sm border bg-blue-400">signOut</button>
+       </div>
         :
-         <Link to='/login'><button className="btn">Login</button></Link>
+         <Link to='/login'><button className="text-sm p-2 rounded-md  border bg-green-500">Login</button></Link>
        }
       
        </div>
