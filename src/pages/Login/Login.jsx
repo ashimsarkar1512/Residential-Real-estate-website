@@ -28,7 +28,7 @@ const Login = () => {
       } = useForm ()
 
            const handleLogin=data=>{
-          
+           
             const {email,password}=data;
 
             if (password.length<6){
@@ -57,12 +57,22 @@ const Login = () => {
               setLoginFailed(toast.error(error.message))
             })
             }
+
+            const handleSocialLogin=socialProvider=>{
+              socialProvider()
+              .then(result=>{
+                if(result.user){
+                   navigate(location?.state || '/');
+                }
+              
+              })
+            }
           
             return (
                         <div>
                                  <div className=" ">
                                     <h2 className="text-3xl text-center my-6 ">Please login</h2>
-      <form onSubmit={handleSubmit(handleLogin)}  className="  md:w-1/2 lg:1/2 mx-auto">
+      <form onSubmit={handleSubmit(handleLogin)}  className=" border-2 p-3 rounded-md md:w-1/2 lg:1/2 mx-auto">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -89,17 +99,19 @@ const Login = () => {
           <button className="btn btn-secondary">Login</button>
         </div>
       </form>
-      <p className="text-center my-4">Dont have an account <Link className=" text-purple-600 font-bold" to='/register'>Register</Link></p>
+      <p className="text-center my-2">Dont have an account <Link className=" text-purple-600 font-bold" to='/register'>Register</Link></p>
     </div>    
     <ToastContainer></ToastContainer>
-               
-           <div className="flex justify-center mx-auto gap-10 "> 
+                <p className="text-2xl font-semibold text-yellow-800 my-2 text-center">social Login</p>  
+           <div className="flex mb-5 justify-center mx-auto gap-16 "> 
+
+          
 
             <button
-            onClick={()=>googleLogin()}
+            onClick={()=>handleSocialLogin(googleLogin)}
              className="btn text-primary bg-white btn-outline border-2 my-2">Google</button>
             <button
-            onClick={()=>githubLogin()}
+            onClick={()=>handleSocialLogin(githubLogin)}
              className="btn text-secondary bg-white btn-outline border-2 my-2">Github</button>
            </div>
                         </div>

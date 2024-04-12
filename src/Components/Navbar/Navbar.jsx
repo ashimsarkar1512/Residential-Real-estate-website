@@ -16,11 +16,9 @@ const Navbar = () => {
 
 
             const navLinks=<>
-            <li><NavLink to='/'>Home</NavLink></li>
-            
-            
-
-</>
+            <li className="mr-3"><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/update'>Update-Profile</NavLink></li>
+            </>
    return (
        <div className="navbar  rounded-md bg-blue-500 mt-3">
        <div className="navbar-start">
@@ -44,10 +42,17 @@ const Navbar = () => {
          </ul>
        </div>
        <div className="navbar-end">
+         
        {
         user?
        <div className="flex gap-3">
-         <img className="w-8 rounded-full" src='https://i.ibb.co/BCWmFS4/unnamed.jpg' alt="" /> 
+         <div className="dropdown dropdown-hover">
+     <div tabIndex={0} role="button" ><img className="w-8 rounded-full" src='https://i.ibb.co/BCWmFS4/unnamed.jpg' alt="" /></div>
+         <ul tabIndex={0} className="dropdown-content z-[1] menu  shadow bg-base-100 rounded w-24">
+          <li className=" font-bold"><a>Ashim</a></li>
+         
+        </ul>
+          </div>
         <button  onClick={handleSignOut} className="text-sm border bg-blue-400">signOut</button>
        </div>
         :

@@ -6,6 +6,7 @@ import Register from "../pages/Register/Register";
 import NotFound from "../pages/Not found/NotFound";
 import EstateDetails from "../pages/EstateDetails/EstateDetails";
 import PrivateRoute from "./privateRoute/PrivateRoute";
+import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 
  
 
@@ -19,6 +20,10 @@ import PrivateRoute from "./privateRoute/PrivateRoute";
                                     path:"/",
                                     element:<Home></Home>,
                                     loader:()=>fetch('/Residential.json')
+                              },
+                              {
+                                     path:"/update",
+                                     element:<UpdateProfile></UpdateProfile>
                               },
                               {
                                  path:'/estate/:id',
