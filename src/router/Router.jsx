@@ -5,6 +5,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import NotFound from "../pages/Not found/NotFound";
 import EstateDetails from "../pages/EstateDetails/EstateDetails";
+import PrivateRoute from "./privateRoute/PrivateRoute";
 
  
 
@@ -21,7 +22,7 @@ import EstateDetails from "../pages/EstateDetails/EstateDetails";
                               },
                               {
                                  path:'/estate/:id',
-                                 element:<EstateDetails></EstateDetails>,
+                                 element:<PrivateRoute><EstateDetails></EstateDetails></PrivateRoute>,
                                  loader:()=>fetch('/Residential.json')
 
 

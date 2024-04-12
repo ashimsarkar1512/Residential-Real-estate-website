@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 import { useForm } from "react-hook-form";
@@ -13,6 +13,8 @@ const Login = () => {
        const [loginFailed,setLoginFailed]=useState('')
        const [loginSuccess,setLoginSuccess]=useState('')
        const [showPassword,setShowPassword]=useState(false);
+       const location=useLocation();
+       const navigate=useNavigate();
 
 
       const {signInUser,googleLogin,githubLogin}=useContext(AuthContext)
@@ -45,8 +47,10 @@ const Login = () => {
 
             signInUser(email,password)
             .then(result=>{
-              console.log(result.user);
+              console.log(result.user); 
               setLoginSuccess(toast.success('Login successfully'))
+
+               navigate(location?.state? location.state:'/')
             })
             .catch(error=>{
               console.error(error)

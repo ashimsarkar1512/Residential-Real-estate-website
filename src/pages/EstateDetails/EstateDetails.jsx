@@ -17,7 +17,7 @@ const EstateDetails = () => {
                const{ estate_title,image,segment_name, description,price,status,area,location,facilities}=details
             return (
                   <section className=" dark:text-gray-800">
-                  <div className="container max-w-5xl my-5  mx-auto space-y-6 sm:space-y-12">
+                  <div className="container max-w-6xl my-5  mx-auto space-y-6 sm:space-y-12">
                         < a rel="noopener noreferrer" href="#" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
                               <img src={image} alt="" className="object-cover h-80 rounded sm:h-96 lg:col-span-6 dark:bg-gray-500" />
                               <div className="p-6 space-y-2 lg:col-span-6">
@@ -32,7 +32,7 @@ const EstateDetails = () => {
                                    <p>{location}</p>
                                    <div>
                                    facilities : 
-                          {facilities?.map(facilitie=><a key={facilitie} className="mr-3 rounded-sm "> {facilitie}</a>)}
+                          {facilities?.map(facilitie=><li key={facilitie} className="mr-3 rounded-sm "> {facilitie}</li>)}
                           </div>
                               </div>
                         </a>

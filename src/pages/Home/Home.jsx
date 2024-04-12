@@ -11,7 +11,7 @@ const Home = () => {
                             
                                <Banner></Banner>  
 
-                               <div className="grid grid-cols-3 gap-7 my-10 ">
+                               <div className="grid grid-cols-1  lg:grid-cols-3  gap-7 my-10 ">
 
                                {
                                    esate.map(singleEsate=><EstateSection key={singleEsate.id} esate={singleEsate}></EstateSection>)
