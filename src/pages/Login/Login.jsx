@@ -72,7 +72,7 @@ const Login = () => {
                         <div>
                                  <div className=" ">
                                     <h2 className="text-3xl text-center my-6 ">Please login</h2>
-      <form onSubmit={handleSubmit(handleLogin)}  className=" border-2 p-3 rounded-md md:w-1/2 lg:1/2 mx-auto">
+      <form onSubmit={handleSubmit(handleLogin)}  className=" border-2 p-3 border-green-400 rounded-md md:w-1/2 lg:1/2 mx-auto">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>

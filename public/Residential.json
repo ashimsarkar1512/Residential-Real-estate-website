@@ -43,7 +43,7 @@
               "estate_title": "Student Housing Complex",
               "id": "4",
               "segment_name": "Student housing",
-              "description": "A student housing complex with individual bedrooms, study lounges, and a communal kitchen.",
+              "description": "A student housing complex with individual bedrooms, study lounges.",
               "price": "$800/month",
               "status": "rent",
               "area": "Variable",
@@ -91,7 +91,7 @@
               "button_text": "View Property"
             },
             {
-              "image": "https://i.ibb.co/3YnM6QW/pexels-igor-starkov-1693946.jpg",
+              "image": "https://i.ibb.co/Jngzbqn/pexels-pixabay-271624.jpg",
               "estate_title": "Downtown Loft",
               "id": "8",
               "segment_name": "Apartment",

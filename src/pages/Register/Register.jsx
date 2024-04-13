@@ -23,7 +23,7 @@ const Register = () => {
         handleSubmit,formState: { errors },
       } = useForm ();
 
-      const handleRegister= data =>{
+     const handleRegister= data =>{
         const {email,password}=data;
 
         if (password.length<6){
@@ -62,7 +62,7 @@ const Register = () => {
                         <div>
                                     <div className=" ">
                                                 <h2 className="text-3xl text-center my-6">Please Register</h2>
-                  <form onSubmit={handleSubmit(handleRegister)} className=" md:w-1/2 lg:1/2 mx-auto">
+                  <form onSubmit={handleSubmit(handleRegister)} className=" border-2 p-3 border-green-400 md:w-1/2 lg:1/2 mx-auto">
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text">Name</span>

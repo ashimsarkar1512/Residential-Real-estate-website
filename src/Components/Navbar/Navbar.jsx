@@ -18,6 +18,7 @@ const Navbar = () => {
             const navLinks=<>
             <li className="mr-3"><NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/update'>Update-Profile</NavLink></li>
+            <li><NavLink to='/about'>More-About</NavLink></li>
             </>
    return (
        <div className="navbar  rounded-md bg-blue-500 mt-3">
@@ -47,9 +48,9 @@ const Navbar = () => {
         user?
        <div className="flex gap-3">
          <div className="dropdown dropdown-hover">
-     <div tabIndex={0} role="button" ><img className="w-8 rounded-full" src='https://i.ibb.co/BCWmFS4/unnamed.jpg' alt="" /></div>
+     <div tabIndex={0} role="button" ><img className="w-8 rounded-full" src={user?.photoUrl ||'https://i.ibb.co/BCWmFS4/unnamed.jpg'} alt="" /></div>
          <ul tabIndex={0} className="dropdown-content z-[1] menu  shadow bg-base-100 rounded w-24">
-          <li className=" font-bold"><a>Ashim</a></li>
+          <li className=" font-bold"><a>{user?.displayName || "user name not found"}</a></li>
          
         </ul>
           </div>
