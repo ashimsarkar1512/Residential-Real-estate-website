@@ -33,7 +33,7 @@ const Navbar = () => {
              }
            </ul>
          </div>
-         <a className="btn btn-ghost text-xl">Residential</a>
+         <a className="btn btn-ghost text-xl">HomeCrafters</a>
        </div>
        <div className="navbar-center hidden lg:flex">
          <ul className="menu menu-horizontal px-1">
@@ -48,7 +48,7 @@ const Navbar = () => {
         user?
        <div className="flex gap-3">
          <div className="dropdown dropdown-hover">
-     <div tabIndex={0} role="button" ><img className="w-8 rounded-full" src={user?.photoUrl ||'https://i.ibb.co/BCWmFS4/unnamed.jpg'} alt="" /></div>
+     <div tabIndex={0} role="button" ><img className="w-8 rounded-full" src={user?.photoURL ||'https://i.ibb.co/BCWmFS4/unnamed.jpg'} alt="" /></div>
          <ul tabIndex={0} className="dropdown-content z-[1] menu  shadow bg-base-100 rounded w-24">
           <li className=" font-bold"><a>{user?.displayName || "user name not found"}</a></li>
          

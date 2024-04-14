@@ -1,10 +1,14 @@
+import { Helmet } from "react-helmet-async";
 
 
 const About = () => {
             return (
-                        <div className="flex gap-5 my-10"> 
+                        <div className="flex flex-col md:flex-col lg:flex-row gap-5 my-10"> 
+                        <Helmet>
+                          <title>More About</title>
+                        </Helmet>
 
-                       <div className="card w-96 bg-base-100 shadow-xl">
+                       <div className="card  bg-base-100 shadow-xl">
                      
                         <div className="card-body items-center text-center">
                           <h2 className="card-title">FORECLOCURES</h2>
@@ -15,7 +19,7 @@ const About = () => {
                           <img src="https://i.ibb.co/rbDcMyL/icon-usa.png" alt="Shoes" className="rounded-xl" />
                         </figure>
                       </div> 
-                       <div className="card w-96 bg-base-100 shadow-xl">
+                       <div className="card bg-base-100 shadow-xl">
                      
                         <div className="card-body items-center text-center">
                           <h2 className="card-title">CONTRACTS</h2>
@@ -26,7 +30,7 @@ const About = () => {
                           <img src="https://i.ibb.co/D40p4sd/icon-contract.png" alt="Shoes" className="rounded-xl" />
                         </figure>
                       </div> 
-                       <div className="card w-96 bg-base-100 shadow-xl">
+                       <div className="card  bg-base-100 shadow-xl">
                      
                         <div className="card-body items-center text-center">
                           <h2 className="card-title">SIGNS & MORE</h2>

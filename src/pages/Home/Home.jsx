@@ -2,6 +2,7 @@ import Banner from "./Banner";
 import { useLoaderData } from "react-router-dom";
 import EstateSection from "./EstateSection/EstateSection";
 import Category from "./category/Category";
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
@@ -9,6 +10,10 @@ const Home = () => {
     console.log(esate);
     return (
         <div>
+
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
 
             <div className="my-10"><Banner></Banner> </div>
             <div className="text-center" data-aos="fade-down"
@@ -24,7 +29,7 @@ const Home = () => {
                 }
 
             </div>
-            <h2 className="text-2xl font-semibold text-center ">About Zillow s Recommendations</h2>
+            <h2 className="text-2xl font-semibold text-center ">About HomeCrafts Recommendations</h2>
             <Category></Category>
         </div>
     );

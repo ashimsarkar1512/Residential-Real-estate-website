@@ -2,7 +2,7 @@
 
 const Category = () => {
             return (
-                        <div className="flex gap-5 my-14">
+                        <div className="flex flex-col md:flex-row lg:flex-row gap-5 my-14">
 
                                     <div className="card  bg-base-100 shadow-xl transition border-2 hover:scale-105 border-primary hover:border-secondary border-opacity-30">
                                                 <figure data-aos="flip-left"

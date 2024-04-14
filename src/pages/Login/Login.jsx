@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -50,7 +51,9 @@ const Login = () => {
               console.log(result.user); 
               setLoginSuccess(toast.success('Login successfully'))
 
-               navigate(location?.state? location.state:'/')
+            setTimeout(()=>{
+              navigate(location?.state? location.state:'/')
+            },3000);
             })
             .catch(error=>{
               console.error(error)
@@ -70,6 +73,9 @@ const Login = () => {
           
             return (
                         <div>
+                          <Helmet>
+                            <title> Login page</title>
+                          </Helmet>
                                  <div className=" ">
                                     <h2 className="text-3xl text-center my-6 ">Please login</h2>
       <form onSubmit={handleSubmit(handleLogin)}  className=" border-2 p-3 border-green-400 rounded-md md:w-1/2 lg:1/2 mx-auto">
@@ -90,7 +96,7 @@ const Login = () => {
                       {errors.password && <span className="text-red-700">This field is required</span>}
                       <span className="absolute right-5 bottom-4" onClick={()=>setShowPassword(!showPassword)}>
                         {
-                          showPassword? <FaEye></FaEye>:<FaEyeSlash></FaEyeSlash>
+                          showPassword? <FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>
                         }
                         </span>
                        
