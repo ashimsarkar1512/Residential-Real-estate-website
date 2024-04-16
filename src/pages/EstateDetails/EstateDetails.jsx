@@ -39,7 +39,7 @@ const EstateDetails = () => {
                                     <p>Status : {status}</p>
                                     <p>area : {area}</p>
 
-                                    <p>{location}</p>
+                                    <p>Location : {location}</p>
                                     <div>
                                           facilities :
                                           {facilities?.map(facilitie => <li key={facilitie} className="mr-3 rounded-sm "> {facilitie}</li>)}

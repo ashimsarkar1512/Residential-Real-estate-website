@@ -1,8 +1,21 @@
-# React + Vite
+website name:HomeCrafters
+live link: https://residential-real-estate-auth.web.app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Featured and characteristics
+* At first user can see the home page in this website.
 
-Currently, two official plugins are available:
+* Then user click the the navbar login button and he/she could see the login page form end at the page have to register button then user click this write the register then open the register page and create the account in register page .
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* User will go the login page and use to right email,password or google and github will login then will see the success toast massage. 
+
+* user can see the user profile when user login in website.
+
+* estate details page,update profile route and extra support route in protected/private this page see the user when he/she login in this website.
+
+
+npm package:
+1.React hook form.
+2.swiper slider.
+3.AOS package.
+
+

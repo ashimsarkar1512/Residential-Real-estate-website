@@ -22,9 +22,9 @@ const Navbar = () => {
 
   console.log(photo?.photoURL)
   const navLinks = <>
-    <li className="mr-3"><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/update'>Update-Profile</NavLink></li>
-    <li><NavLink to='/support'>Support</NavLink></li>
+    <li className="mr-3   font-bold"><NavLink to='/'>Home</NavLink></li>
+    <li className=" font-bold"><NavLink to='/update'>Update-Profile</NavLink></li>
+    <li className= " text-white font-bold"><NavLink to='/support'>Support</NavLink></li>
   </>
   return (
     <div  className=" nav  navbar   rounded-md mt-2 ">
@@ -39,7 +39,7 @@ const Navbar = () => {
             }
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl text-black">Home<span className="text-2xl text-orange-500">Crafters</span></a>
+        <a className="btn btn-ghost gap-0 text-xl text-black">Home<span className="text-2xl text-orange-500">Crafters</span></a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
