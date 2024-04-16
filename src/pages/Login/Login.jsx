@@ -5,9 +5,10 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import './login.css'
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
 
@@ -65,7 +66,7 @@ const Login = () => {
               socialProvider()
               .then(result=>{
                 if(result.user){
-                  setLoginSuccess(toast.success("log in with social "))
+                  setLoginSuccess(toast.success("login successfully "))
                   setTimeout(()=>{
                     navigate(location?.state? location.state:'/')
                   },3000);
@@ -79,8 +80,8 @@ const Login = () => {
                           <Helmet>
                             <title> Login page</title>
                           </Helmet>
-                                 <div className=" form my-5  ">
-                                    <h2 className="text-3xl text-center my-2  ">Please login</h2>
+                                 <div className=" form my-3  ">
+                                    <h2 className="text-3xl text-center   ">Please login</h2>
       <form onSubmit={handleSubmit(handleLogin)}  className=" rounded-md md:w-3/2 lg:3/2 mx-auto">
         <div className="form-control">
           <label className="label">
@@ -108,20 +109,21 @@ const Login = () => {
           <button className="btn btn-secondary">Login</button>
         </div>
       </form>
-      <p className="text-center my-3">Dont have an account <Link className=" text-green-600 font-bold" to='/register'>Register</Link></p>
+      <p className="text-center text-xl my-3"> An new account <Link className=" text-green-600 font-bold" to='/register'>Register</Link></p>
        
     <ToastContainer></ToastContainer>
-                <p className="text-2xl font-semibol my-2 text-center">social Login</p>  
-           <div className="flex mb-5 justify-center mx-auto gap-16 "> 
+                <p className="text-2xl font-semibol my-2 text-center">OR</p>  
+                <hr className="my-3" />
+           <div className="flex mb-5 justify-center mx-auto gap-8 "> 
 
           
 
             <button
             onClick={()=>handleSocialLogin(googleLogin)}
-             className="btn text-primary bg-white btn-outline border-2 my-2">Google</button>
+             className=" text-5xl"><FcGoogle /></button>
             <button
             onClick={()=>handleSocialLogin(githubLogin)}
-             className="btn text-secondary bg-white btn-outline border-2 my-2">Github</button>
+             className="text-5xl"><FaGithub /></button>
            </div>
            </div>
                         </div>

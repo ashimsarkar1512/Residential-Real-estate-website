@@ -9,7 +9,7 @@ import { updateProfile } from "firebase/auth";
 
 const UpdateProfile = () => {
         
-      //  const {updateUserProfile}=useContext(AuthContext)
+     
      
           const handleUpdateProfile=e=>{
             e.preventDefault()
@@ -20,12 +20,10 @@ const UpdateProfile = () => {
             updateProfile(auth.currentUser, {
               displayName: name, photoURL:photo
             }).then(() => {
-              // Profile updated!
-              // ...
+              
               window.location.reload()
             }).catch(() => {
-              // An error occurred
-              // ...
+             
             });
             
            
@@ -43,7 +41,7 @@ const UpdateProfile = () => {
                   </Helmet>
                     <div className="my-5 profile">
                   <div data-aos="fade-up"
-     data-aos-duration="3000" className=" flex-col ">
+                   data-aos-duration="3000" className=" flex-col ">
                     <div className="text-center ">
                       <h1 className="text-4xl font-bold text-white mt-5">Update Profile</h1>
                       

@@ -1,15 +1,16 @@
 .register{
             background: url('/public/aks.jpg') no-repeat center center/cover;
             color: white;
-            height: 520px; 
+            height: 600px; 
 }
 .register-page {
-            height: 520px;
-            width: 400px;
+            height: 600px;
+            width: 360px;
             border: 1px solid black;
             align-items: center;
             margin: auto;
             padding: 20px;
             background-color: rgba(0,0, 0, 0.5);    
-            box-shadow: inset;        
+            box-shadow: inset; 
+                  
 }
