@@ -15,7 +15,7 @@ const Home = () => {
                 <title>Home</title>
             </Helmet>
 
-            <div className="my-10"><Banner></Banner> </div>
+            <div className="my-7"><Banner></Banner> </div>
             <div className="text-center" data-aos="fade-down"
                 data-aos-easing="linear"
                 data-aos-duration="1500">

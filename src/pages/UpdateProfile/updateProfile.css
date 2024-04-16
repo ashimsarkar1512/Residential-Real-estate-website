@@ -1,0 +1,16 @@
+.update{
+            background: url('/public/ashimkse.jpg') no-repeat center center/cover;
+
+            height: 500px; 
+}
+
+.profile{
+            height: 500px;
+            width: 350px;
+            border: 1px solid black;
+            align-items: center;
+            margin: auto;
+            
+            background-color: rgba(0,0, 0, 0.5);    
+            box-shadow: inset;        
+}

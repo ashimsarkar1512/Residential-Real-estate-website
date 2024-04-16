@@ -16,7 +16,7 @@ import { Autoplay,  Navigation } from 'swiper/modules';
 const Banner = () => {
             return (
                         <>
-                          <Swiper
+                          <Swiper 
                             spaceBetween={20}
                             centeredSlides={true}
                             autoplay={{
@@ -28,13 +28,14 @@ const Banner = () => {
                             modules={[Autoplay, Navigation]}
                             className="mySwiper"
                           >
-                            <div className='mt-10'>
+                            <div  className='mt-10'>
                             <SwiperSlide><img src="https://i.ibb.co/tKFgvj1/pexels-robert-so-14074856.jpg" alt="" /></SwiperSlide>
                             <SwiperSlide><img src="https://i.ibb.co/0DntBTm/pexels-pixabay-248837.jpg" alt="" /></SwiperSlide>
                             <SwiperSlide><img src="https://i.ibb.co/crY7chn/pexels-pixabay-259637.jpg" alt="" /></SwiperSlide>
                             <SwiperSlide><img src="https://i.ibb.co/KrZMqmy/pexels-pixabay-314937-1.jpg" alt="" /></SwiperSlide>
                            
                             </div>
+                          
                            
                           </Swiper>
                         </>

@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
-
+import './login.css'
 
 const Login = () => {
 
@@ -33,7 +33,7 @@ const Login = () => {
             const {email,password}=data;
 
             if (password.length<6){
-              setLoginFailed (toast.error('password should be 6 characters'))
+              setLoginFailed (toast.error('password at list 6 characters'))
               return;
             }
             else if(!/[A-Z]/.test(password)){
@@ -57,7 +57,7 @@ const Login = () => {
             })
             .catch(error=>{
               console.error(error)
-              setLoginFailed(toast.error(error.message))
+              setLoginFailed(toast.error("log in failed"))
             })
             }
 
@@ -65,38 +65,41 @@ const Login = () => {
               socialProvider()
               .then(result=>{
                 if(result.user){
-                   navigate(location?.state || '/');
+                  setLoginSuccess(toast.success("log in with social "))
+                  setTimeout(()=>{
+                    navigate(location?.state? location.state:'/')
+                  },3000);
                 }
               
               })
             }
           
             return (
-                        <div>
+                        <div className="glass my-5 ">
                           <Helmet>
                             <title> Login page</title>
                           </Helmet>
-                                 <div className=" ">
-                                    <h2 className="text-3xl text-center my-6 ">Please login</h2>
-      <form onSubmit={handleSubmit(handleLogin)}  className=" border-2 p-3 border-green-400 rounded-md md:w-1/2 lg:1/2 mx-auto">
+                                 <div className=" form my-5  ">
+                                    <h2 className="text-3xl text-center my-2  ">Please login</h2>
+      <form onSubmit={handleSubmit(handleLogin)}  className=" rounded-md md:w-3/2 lg:3/2 mx-auto">
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text text-white">Email</span>
           </label>
-          <input type="email" placeholder="email" name="email" className="input input-bordered" {...register("email", { required: true })}  />
+          <input type="email" placeholder="email" name="email" className="input text-black input-bordered" {...register("email", { required: true })}  />
           {errors.email && <span className="text-red-700">This field is required</span>}
         </div>
         <div className="form-control relative">
                       <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text text-white">Password</span>
                       </label>
-                      <input type={showPassword? "text":"password"}
+                      <input   type={ showPassword? "text":"password"}
                        placeholder="password" name="password"
-                        className="input input-bordered" {...register("password", { required: true })} />
+                        className="input text-black input-bordered" {...register("password", { required: true })} />
                       {errors.password && <span className="text-red-700">This field is required</span>}
                       <span className="absolute right-5 bottom-4" onClick={()=>setShowPassword(!showPassword)}>
                         {
-                          showPassword? <FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>
+                          showPassword? <FaEyeSlash className="text-black"></FaEyeSlash>:<FaEye className="text-black"></FaEye>
                         }
                         </span>
                        
@@ -105,10 +108,10 @@ const Login = () => {
           <button className="btn btn-secondary">Login</button>
         </div>
       </form>
-      <p className="text-center my-2">Dont have an account <Link className=" text-purple-600 font-bold" to='/register'>Register</Link></p>
-    </div>    
+      <p className="text-center my-3">Dont have an account <Link className=" text-green-600 font-bold" to='/register'>Register</Link></p>
+       
     <ToastContainer></ToastContainer>
-                <p className="text-2xl font-semibold text-yellow-800 my-2 text-center">social Login</p>  
+                <p className="text-2xl font-semibol my-2 text-center">social Login</p>  
            <div className="flex mb-5 justify-center mx-auto gap-16 "> 
 
           
@@ -119,6 +122,7 @@ const Login = () => {
             <button
             onClick={()=>handleSocialLogin(githubLogin)}
              className="btn text-secondary bg-white btn-outline border-2 my-2">Github</button>
+           </div>
            </div>
                         </div>
             );

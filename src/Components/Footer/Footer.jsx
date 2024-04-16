@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <footer className="footer  p-10 bg-black text-base-content">
+    <footer  className="footer p-10 bg-black text-base-content">
      <div className="text-white">
       <h1 className="text-2xl font-semibold mb-3 ">Homecrafts</h1>
       <p>Collins Street West, Victoria 8007, Australia.</p>

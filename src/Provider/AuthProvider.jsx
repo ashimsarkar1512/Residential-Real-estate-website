@@ -8,21 +8,21 @@ const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 
 const AuthProvider = ({children}) => {
+              
             const [user,setUser] =useState(null)
             const [loading,setLoading]=useState(true)
-            console.log (user)
-
+           
              const createUser=(email,password)=>{
               setLoading(true)
                         return createUserWithEmailAndPassword(auth,email,password)
              }
 
 
-             const updateUserProfile=(name,photo)=>{
-             return  updateProfile(auth.currentUser, {
-                displayName: name, photoURL: photo
-              })
-             }
+            //  const updateUserProfile=(name,photo)=>{
+            //  return  updateProfile(auth.currentUser, {
+            //     displayName: name, photoURL: photo
+            //   })
+            //  }
 
 
              const signInUser=(email,password)=>{
@@ -68,7 +68,8 @@ const AuthProvider = ({children}) => {
                         logOut,
                         googleLogin,
                         githubLogin,
-                        updateUserProfile
+                        // updateUserProfile,
+                       
             }
             return (
                         <AuthContext.Provider value={authInfo} >

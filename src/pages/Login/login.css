@@ -1,0 +1,16 @@
+.glass{
+            background: url('/public/ashim\ \(2\).jpg') no-repeat center center/cover;
+            color: white;
+            height: 500px;
+
+}
+.form{
+   height: 500px;
+   width: 350px;
+   border: 1px solid black;
+   align-items: center;
+   margin: auto;
+   padding: 20px;
+   background-color: rgba(0,0, 0, 0.5);    
+   box-shadow: inset;     
+}

@@ -7,7 +7,8 @@ import NotFound from "../pages/Not found/NotFound";
 import EstateDetails from "../pages/EstateDetails/EstateDetails";
 import PrivateRoute from "./privateRoute/PrivateRoute";
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
-import About from "./About/About";
+import Support from "../pages/Support/Support";
+
 
  
 
@@ -27,8 +28,8 @@ import About from "./About/About";
                                      element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
                               },
                               {
-                                     path:"/about",
-                                     element:<PrivateRoute><About></About></PrivateRoute>
+                                     path:"/support",
+                                     element:<PrivateRoute><Support></Support></PrivateRoute>
                               },
                               {
                                  path:'/estate/:id',
