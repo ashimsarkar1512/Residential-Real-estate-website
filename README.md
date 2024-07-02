@@ -3,6 +3,12 @@ website name:HomeCrafters
 <br/>
 live link: https://residential-real-estate-auth.web.app
 
+<br/>
+
+Overview:
+<br/>
+Users initially see the home page and can navigate to the login page via the navbar, where they can access the registration page to create an account. After logging in with email, password, Google, or GitHub, they see a success toast message and can view their profile. Protected pages, such as the estate details page, update profile route, and extra support route, are only accessible to logged-in users.
+
 
 Featured and characteristics
 * At first user can see the home page in this website.
