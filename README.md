@@ -1,5 +1,8 @@
 website name:HomeCrafters
+
+<br/>
 live link: https://residential-real-estate-auth.web.app
+
 
 Featured and characteristics
 * At first user can see the home page in this website.
@@ -14,8 +17,13 @@ Featured and characteristics
 
 
 npm package:
+<br/>
 1.React hook form.
 2.swiper slider.
 3.AOS package.
+
+Technology used:
+<br/>
+javascript,React,tailwind,daisyuI,html,cssnode.js,firebase,
 
 
